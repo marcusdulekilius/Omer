@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ömerweb</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul class="nav-links">
+            <li><a href= "#main">Home</a></li>
+            <li><a href= "#pdf-link">PDF to Link</a></li>
+            <li><a href= "#image-link">Image to Link</a></li>
+            <li><a href= "#donate">Donate</a></li>
+        </ul>
+    </div>
+
+    <div id="main" class="section">
+        <h2>Home</h2>
+        <!-- Ana sayfa -->
+    </div>
+
+    <div id="pdf-link" class="section" style="display: none;">
+        <h2>PDF to Link</h2>
+        <form id="pdfForm">
+            <label for="pdfFile">PDF dosyasını seçiniz:</label>
+            <input type="file" id="pdfFile" accept="application/pdf">
+            <button type="submit">Yükle</button>
+        </form>
+        <div id="pdfInfo"></div>
+    </div>
+
+    <div id="image-link" class="section" style="display: none;">
+        <h2>Image to Link</h2>
+        <!-- Resimden linke -->
+    </div>
+
+    <div id="donate" class="section" style="display: none;">
+        <h2>Donate</h2>
+        <div class="donate-options">
+            <button class="donate-btn" data-amount="1">$1</button>
+            <button class="donate-btn" data-amount="5">$5</button>
+            <button class="donate-btn" data-amount="10">$10</button>
+            <button class="donate-btn" data-amount="20">$20</button>
+            <button class="donate-btn" data-amount="100">$100</button>
+        </div>
+        <div class="card-form">
+            <h3>Card Information</h3>
+            <form>
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+                <label for="cardName">Cardholder Name:</label>
+                <input type="text" id="cardName" placeholder="John Doe">
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" placeholder="MM/YY">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" placeholder="123">
+                <button type="submit">Donate</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="site.js"></script>
+</body>
+</html>
