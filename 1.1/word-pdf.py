@@ -16,18 +16,18 @@ def convert():
     
     file = request.files['wordFile']
     
-    # Dosya türü kontrolü
+    # File Control
     if file.filename == '':
         return "No selected file"
     
     if file and file.filename.endswith('.docx'):
-        # Word dosyasını PDF'e dönüştürme işlemi
+        # Word to PDF
         doc = Document(file)
         pdf_output = BytesIO()
         doc.save(pdf_output)
         pdf_output.seek(0)
         
-        # PDF dosyasını indirme olarak gönderme
+        # Download
         return send_file(pdf_output, attachment_filename='output.pdf', as_attachment=True)
     
     return "Unsupported file format"
